@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --lightPink: #FFF2F2;
+    --gray : #E5E0FF;
+    --bluePrimary : #7286D3;
+    --blueSecondary : #8EA7E9;
+}
+
+#wrapper{
+    background-image: linear-gradient(var(--bluePrimary),var(--blueSecondary));
+    height: 100vh;
+    width: 100vw;
+    color:var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container{
+    width:50%;
+    height: 80vh;
+    margin:0 auto;
+}
+
+.container>h1{
+    text-align: center;
+    scale:1.2;
+    font-weight: bold;
+}
+
+.tabcontainer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    gap:2rem;
+    margin:3rem auto
+}
+
+.active{
+    background-color: var(--lightPink);
+    padding:0.3rem;
+    border-radius: 10px;
+    font-weight: bold;
+    color:rgb(115, 114, 114)
+}
+
+.tabcontainer div{
+    cursor: pointer;
+}
+
+.btnAccess{
+    background-color: var(--blueSecondary);
+    border: none;
+    color:var(--lightPink);
+    padding:0.5rem 1rem;
+    border-radius: 10%;
+    cursor:pointer
+}
+
+.access{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    font-size: larger;
+}
+
+
+.searchForm{
+    display: none;
+    gap:0.7rem;
+    align-items: center;
+    justify-content: center;
+}
+[searchBtn]{
+    padding:0.2rem 0.5rem
+}
+.loadingScreen{
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+}
+.displayContainer{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem
+}
+
+.details{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    margin:0.5rem auto 1rem
+}
+[countryFlag]{
+    width:40px
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1.5rem;
+}
+
+[cityName]{
+    font-weight: bold;
+}
+
+.infoImg{
+    height:5rem;
+}
+[temp]{
+    scale:1.5;
+    font-weight: bold;
+}
+
+.info div{
+    background-color: rgb(109, 137, 220);
+    padding:1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius:10px;
+}
+
+@media screen and (max-width:1000px) {
+    #wrapper{
+        padding: 0;
+    }
+    .container{
+        width:100%;
+        margin:auto 0
+    }
+    .tabcontainer{
+        width: 100%;
+    }
+    .info{
+        gap:0.8rem;
+        width: 90%;
+    }
+    .info div{
+        padding:1rem 0
+    }
+}
+
+.activeC{
+    display: flex;
+} 
