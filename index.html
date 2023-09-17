@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="wrapper">
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        <div class="tabcontainer">
+            <div class="yourWeatherTab">
+                <h3>Your Weather</h3>
+            </div>
+            <div class="searchWeatherTab">
+                <h3>Search Weather</h3>
+            </div>
+        </div>
+        <div class="weatherContainer">
+
+            <!--Container-1(Grant Access)-->
+            <div class="access">
+                <picture>
+                    <img src="./assets/location.png" alt="" height="80" width="80" loading="lazy">
+                </picture>
+                <h4>Grant your location accces</h4>
+                <button class="btnAccess">Grant Access</button>
+            </div>
+
+            <!--Search Form-->
+            <form class="searchForm">
+                <input placeholder="Search for City....." searchBar type="text">
+                <button searchBtn><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <!--Loading Screen-->
+            <div class="loadingScreen">
+                <img src="./assets/loading.gif" alt="" height="150" width="150">
+                <h3>Loading....</h3>
+            </div>
+
+            <!--Weather Display Screen-->
+
+            <div class="displayContainer">
+                <div class="details">
+                    <h1 cityName></h1>
+                    <img src="" alt="" countryFlag>
+                </div>
+                <h2 desc></h2>
+                <img src="" alt="" weatherIcon>
+                <h3 temp ></h3>
+                <div class="info">
+                    <div>
+                        <img src="./assets/wind.png" alt="" class="infoImg">
+                        <p>Wind Speed</p>
+                        <p windSpeed></p>
+                    </div>
+                    <div>
+                        <img src="./assets/humidity.png" alt="" class="infoImg">
+                        <p>Humidity</p>
+                        <p humidity></p>
+                    </div>
+                    <div>
+                        <img src="./assets/cloud.png" alt="" class="infoImg">
+                        <p>Haze</p>
+                        <p haze></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+<script src="script.js"></script>
+</body>
+</html>
