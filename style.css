@@ -63,14 +63,17 @@ select {
 
 #wrapper{
     background-image: linear-gradient(var(--bluePrimary),var(--blueSecondary));
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     color:var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    overflow:hidden;
+    overflow-x:hidden;
+    max-height: fit-content;
+    padding-bottom: 2rem;
+
 }
 
 .container{
