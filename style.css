@@ -60,6 +60,9 @@ select {
     --bluePrimary : #7286D3;
     --blueSecondary : #8EA7E9;
 }
+body{
+    overflow-x: hidden;
+}
 
 #wrapper{
     background-image: linear-gradient(var(--bluePrimary),var(--blueSecondary));
@@ -70,7 +73,6 @@ select {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    overflow-x:hidden;
     max-height: fit-content;
     padding-bottom: 2rem;
 
